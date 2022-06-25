@@ -18,6 +18,11 @@ PUT     /api/products/edit              controllers.ProductListController.editPr
 DELETE  /api/products/:itemId           controllers.ProductListController.removeById(itemId: Long)
 POST    /api/products/                  controllers.ProductListController.addNewProduct
 
+GET     /api/users                      controllers.UserListController.getAll
+GET     /api/users/:userId              controllers.UserListController.getById(userId: Long)
+PUT     /api/users/password             controllers.UserListController.changePassword
+DELETE  /api/users/:userId              controllers.UserListController.removeById(userId: Long)
+POST    /api/users/register             controllers.UserListController.registerNewUser 
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file                   controllers.Assets.versioned(path="/public", file: Asset)
